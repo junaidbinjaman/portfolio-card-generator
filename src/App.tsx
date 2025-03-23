@@ -26,7 +26,7 @@ export default function App() {
           <Route
             path={passwordResetPageSlug}
             element={<PasswordReset />}
-          />
+          /> 
           <Route element={<Header />}>
             <Route
               path={termsAndConditionsPageSlug}
