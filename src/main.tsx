@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
+import SlugContextProvider from './contexts/SlugContext.tsx';
 
 async function enableMocking() {
   if (process.env.NODE_ENV !== 'development') {
@@ -18,7 +19,9 @@ async function enableMocking() {
 enableMocking().then(() => {
   createRoot(document.getElementById('root')!).render(
     <StrictMode>
-      <App />
+      <SlugContextProvider>
+        <App />
+      </SlugContextProvider>
     </StrictMode>,
   );
 });

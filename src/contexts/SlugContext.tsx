@@ -53,7 +53,7 @@ export const useSlug = (pageTitle: string) => {
 
   const { slugsMap, isLoading } = context;
 
-  if (isLoading) return null;
+  if (isLoading) return 'loading';
 
-  return slugsMap.get(pageTitle) || null;
+  return slugsMap.get(pageTitle) || '404';
 };

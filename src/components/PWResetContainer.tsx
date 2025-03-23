@@ -5,8 +5,11 @@ import LogoSrc from '/portfolio-card-generator-logo.png';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { Link } from 'react-router';
 import * as motion from 'motion/react-client';
+import { useSlug } from '../contexts/SlugContext';
 
 const PWResetContainer = () => {
+  const loginPageSlug = useSlug('Login');
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -18,7 +21,7 @@ const PWResetContainer = () => {
         width={167}
       />
 
-      <Link to="/">
+      <Link to={`/${loginPageSlug}`}>
         <Button classes="text-white flex justify-center items-center gap-[0.4375rem] !py-[0.625rem] mt-15 mb-10">
           {<FaArrowLeft />} Go Back to Login
         </Button>

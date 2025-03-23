@@ -18,6 +18,16 @@ export const handlers = [
         pageId: 3532,
         title: 'Privacy Policy',
         slug: 'privacy-policy'
+      },
+      {
+        pageId: 3532,
+        title: 'Password Reset',
+        slug: 'password-reset'
+      },
+      {
+        pageId: 3532,
+        title: 'Login',
+        slug: 'login'
       }
     ])
   }),

@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
   
   return (
     <>
-      <PrimaryHeading level={1}>Terms and Conditions</PrimaryHeading>
+      <PrimaryHeading level={1}>Privacy policy</PrimaryHeading>
       
     </>
   );
