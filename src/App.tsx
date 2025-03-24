@@ -6,7 +6,7 @@ import TermsAndConditions from './pages/TermsAndConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import { useSlug } from './contexts/SlugContext';
 import NotFound404 from './pages/404';
-import Header from './components/Header';
+import Layout from './components/LayOut';
 
 export default function App() {
   const passwordResetPageSlug = useSlug('Password Reset');
@@ -27,7 +27,7 @@ export default function App() {
             path={passwordResetPageSlug}
             element={<PasswordReset />}
           />
-          <Route element={<Header />}>
+          <Route element={<Layout />}>
             <Route
               path={termsAndConditionsPageSlug}
               element={<TermsAndConditions />}
