@@ -17,8 +17,12 @@
   --text-small: 0.75rem;
 
   --shadow-primary: 0px 4px 12px 0px rgba(212, 165, 255, 0.15);
+  --shadow-secondary: 0px 1px 4px 0px rgba(12, 12, 13, 0.05);
+  --shadow-footer: 0px -1px 4px 0px rgba(12, 12, 13, 0.05);
+
 }
 
 .border-image-gradient {
   border-image: linear-gradient(99deg, #6ab0ff 0.28%, #d4a5ff 104%) 1;
+  color: #0c0c0d1e;
 }

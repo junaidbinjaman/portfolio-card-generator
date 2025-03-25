@@ -6,7 +6,7 @@ import LogoSrc from '/portfolio-card-generator-logo.png';
 
 const Header = () => {
   return (
-    <header id='header' className='flex gap-[12.4375rem] items-center justify-center shadow-primary py-5'>
+    <header id='header' className='flex gap-[12.4375rem] items-center justify-center shadow-secondary py-5 bg-white'>
       <Logo
         src={LogoSrc}
         width={167}
