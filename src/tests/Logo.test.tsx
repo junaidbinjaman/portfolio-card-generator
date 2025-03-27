@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Logo from '../components/Logo';
-import LogoSrc from '../assets/portfolio-card-generator-logo.png';
+import LogoSrc from '/portfolio-card-generator-logo.png';
 
 describe('Logo', () => {
   it('Should render the image with correct width and height then src is provided', () => {
