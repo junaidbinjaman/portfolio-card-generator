@@ -1,14 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import Logo from '../components/Logo';
-import { useLogoSrc, LogoSrcContextProvider } from '../contexts/LogoSrcContext';
+import LogoSrcContextProvider, { useLogoSrc } from '../contexts/LogoSrcContext';
 
 const TestComponent = () => {
-  const logoSrc = useLogoSrc();
+  const {logoSrc} = useLogoSrc();
   return (
     <Logo
       src={logoSrc}
       width={167}
-      alt="Logo"
+      alt="logo"
     />
   );
 };

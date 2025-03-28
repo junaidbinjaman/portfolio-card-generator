@@ -1,34 +1,36 @@
 import { http, HttpResponse } from 'msw';
 
-let requestCount = 0;
- 
 export const handlers = [
   http.get(`${import.meta.env.VITE_API_URL}/slugs`, () => {
-    requestCount++;
-
-    console.log('API count ' + requestCount + 'times');
-
     return HttpResponse.json([
       {
         pageId: 123,
         title: 'Terms & conditions',
-        slug: 'terms-and-conditions'
+        slug: 'terms-and-conditions',
       },
       {
         pageId: 3532,
         title: 'Privacy Policy',
-        slug: 'privacy-policy'
+        slug: 'privacy-policy',
       },
       {
         pageId: 3532,
         title: 'Password Reset',
-        slug: 'password-reset'
+        slug: 'password-reset',
       },
       {
         pageId: 3532,
         title: 'Login',
-        slug: 'login'
-      }
-    ])
+        slug: 'login',
+      },
+    ]);
   }),
-]
+
+  http.get(`${import.meta.env.VITE_API_URL}/logo`, () => {
+    return HttpResponse.json({
+      logoSrc:
+        'https://raw.githubusercontent.com/junaidbinjaman/portfolio-card-generator/refs/heads/main/public/portfolio-card-generator-logo.png',
+      alt: 'The logo alt description',
+    });
+  }),
+];
