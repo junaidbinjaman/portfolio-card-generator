@@ -9,6 +9,7 @@ interface InputProps {
   register: UseFormRegisterReturn;
   type: string;
   errors: string | undefined;
+  disabled?: boolean;
 }
 
 function assertIsValidInputType(type: string): asserts type is InputTypes {
@@ -19,7 +20,7 @@ function assertIsValidInputType(type: string): asserts type is InputTypes {
   }
 }
 
-const Input = ({ type, classes = '', placeholder, register, errors }: InputProps) => {
+const Input = ({ type, classes = '', placeholder, register, errors, disabled = false }: InputProps) => {
   assertIsValidInputType(type);
 
   return (
@@ -34,17 +35,20 @@ const Input = ({ type, classes = '', placeholder, register, errors }: InputProps
             placeholder={placeholder}
             {...register}
             aria-describedby={errors ? errors : undefined}
+            disabled={disabled}
+            rows={4}
           />
         ) : (
           <input
             type={type}
             className={clsx(
-              'w-full text-paragraph outline-0 py-3 px-3 text-text bg-[#ECECEC] rounded-[10px] transition-all duration-300 ease-in-out placeholder:text-gray-400 focus:placeholder:opacity-0',
+              'w-full text-paragraph outline-0 py-3 px-3 text-text bg-[#ECECEC] rounded-[10px] transition-all duration-300 ease-in-out placeholder:text-gray-400 focus:placeholder:opacity-0 disabled:cursor-not-allowed disabled:text-text/50',
               classes,
             )}
             placeholder={placeholder}
-            {...register}
             aria-describedby={errors ? errors : undefined}
+            disabled={disabled}
+            {...register}
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-r from-accent1 to-accent2 -z-10 rounded-[10px]"></div>

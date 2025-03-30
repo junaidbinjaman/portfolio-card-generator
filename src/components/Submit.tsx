@@ -16,11 +16,11 @@ const Submit = React.memo(({ label, classes = '', onClick, disabled = false }: S
       value={label}
       onClick={onClick}
       disabled={disabled}
-      whileTap={{ scale: 0.85 }}
-      whileHover={{ scale: 1.08 }}
-      transition={{ duration: 0.02, ease: 'linear' }}
+      whileTap={!disabled ? { scale: 0.85 } : undefined}
+      whileHover={!disabled ? { scale: 1.05 } : undefined}
+      transition={{ duration: .01, ease: 'linear' }}
       className={clsx(
-        'py-3 px-8 text-white bg-gradient-to-r from-accent1 to-accent2 rounded-[10px] cursor-pointer transition ease-in-out duration-150 active:scale-75 hover:opacity-90',
+        'py-3 px-8 text-white bg-gradient-to-r from-accent1 to-accent2 rounded-[10px] cursor-pointer transition ease-in-out duration-150 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100',
         classes,
       )}
     />

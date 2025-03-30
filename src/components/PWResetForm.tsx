@@ -60,7 +60,7 @@ const PWResetForm = () => {
         }
         const result = await response.json();
         console.log(result);
-        setRequestResetSent(true);
+        setRequestResetSent(false);
       } catch(error) {
         if (error instanceof Error) {
           if (error.name === 'AbortError') {
@@ -100,6 +100,7 @@ const PWResetForm = () => {
             required: 'Email is required',
           })}
           errors={errors.email?.message}
+          disabled={loading}
         />
         <Submit
           label={loading ? 'Loading...' : 'Send reset Link'}

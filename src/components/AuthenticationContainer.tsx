@@ -27,7 +27,7 @@ const AuthenticationContainer = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      animate={{ opacity: 1, transition: { duration: .3 } }}
       className="p-[3.12rem] bg-white h-[38.75rem] rounded-[10px] shadow-primary"
     >
       <section className="flex justify-center mb-10">
