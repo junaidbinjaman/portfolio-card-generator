@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+    --font-inter: Inter, sans-serif;
+
+    --color-primary-bg: #F5F7FA;
+    --color-highlight-bg: #FFF3E6;
+    --color-accent1: #6AB0FF;
+    --color-accent2: #D4A5FF;
+    --color-text: #1F2A44;
+
+    --text-primary: 2.25rem;
+    --text-secondary: 1.5rem;
+    --text-subheading: 1.125rem;
+    --text-paragraph: 1rem;
+    --text-small: 0.75rem;
+}
