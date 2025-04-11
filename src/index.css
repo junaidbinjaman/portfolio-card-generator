@@ -15,3 +15,7 @@
     --text-paragraph: 1rem;
     --text-small: 0.75rem;
 }
+
+.border-image-gradient {
+    border-image: linear-gradient(99deg, #6AB0FF 0.28%, #D4A5FF 104%) 1;
+}
