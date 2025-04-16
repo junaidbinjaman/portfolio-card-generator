@@ -6,16 +6,18 @@ interface PrimaryHeadingProps {
     classes?: string;
 }
 
-const PrimaryHeading = ({children, level, classes}: PrimaryHeadingProps) => {
-    const Tag = (level ? `h${level}` : 'h1') as
-        | 'h1'
-        | 'h2'
-        | 'h3'
-        | 'h4'
-        | 'h5'
-        | 'h6';
+const PrimaryHeading: React.FC<PrimaryHeadingProps> = React.memo(({ 
+    children, 
+    level = 1, 
+    classes = '' 
+}) => {
+    const Tag = `h${level}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-    return <Tag className={`text-primary text-text font-bold font-inter ${classes}`}>{children}</Tag>;
-};
+    return (
+        <Tag className={`text-primary text-text font-bold font-inter ${classes}`}>
+            {children}
+        </Tag>
+    );
+});
 
 export default PrimaryHeading;
