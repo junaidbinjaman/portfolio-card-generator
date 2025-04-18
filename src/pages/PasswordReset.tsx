@@ -16,7 +16,7 @@ const PasswordReset = () => {
         const data = await response.json();
         setSlugs(data);
       } catch (error) {
-        console.error('Failed to load your data', error);
+        console.error('Failed to load data', error);
       }
     })();
   }, []);
