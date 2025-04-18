@@ -2,26 +2,9 @@ import SmallText from '../components/SmallText';
 import PWResetContainer from '../components/PWResetContainer';
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
-import { useRoutes } from '../contexts/RoutesProvider';
-import { useEffect, useState } from 'react';
 
 const PasswordReset = () => {
-  const { privacyPolicy } = useRoutes();
-  const [slugs, setSlugs] = useState([]);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/slugs`);
-        const data = await response.json();
-        setSlugs(data);
-      } catch (error) {
-        console.error('Failed to load data', error);
-      }
-    })();
-  }, []);
-
-  console.log(slugs);
 
   return (
     <div className="flex flex-col justify-center items-center gap-15 w-screen h-screen">
@@ -39,8 +22,6 @@ const PasswordReset = () => {
           </Link>
         </motion.li>
       </ul>
-
-      <h1>{privacyPolicy}</h1>
     </div>
   );
 };
