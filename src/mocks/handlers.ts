@@ -1,7 +1,13 @@
-import { http, HttpResponse } from 'msw'
+import { http, HttpResponse } from 'msw';
+
+let requestCount = 0;
  
 export const handlers = [
   http.get(`${import.meta.env.VITE_API_URL}/slugs`, () => {
+    requestCount++;
+
+    console.log('API count ' + requestCount + 'times');
+
     return HttpResponse.json([
       {
         pageId: 123,

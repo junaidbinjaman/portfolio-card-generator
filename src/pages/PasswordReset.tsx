@@ -2,9 +2,12 @@ import SmallText from '../components/SmallText';
 import PWResetContainer from '../components/PWResetContainer';
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
+import { useSlug } from '../contexts/SlugContext';
 
 const PasswordReset = () => {
+  const Slug = useSlug('Terms & conditions');
 
+  console.log(Slug);
 
   return (
     <div className="flex flex-col justify-center items-center gap-15 w-screen h-screen">
@@ -22,6 +25,7 @@ const PasswordReset = () => {
           </Link>
         </motion.li>
       </ul>
+
     </div>
   );
 };

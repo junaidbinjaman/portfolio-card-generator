@@ -4,12 +4,12 @@ import Login from './pages/Login';
 import PasswordReset from './pages/PasswordReset';
 import TermsAndConditions from './pages/TermsAndConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import RoutesProvider from './contexts/RoutesProvider';
+import SlugContextProvider from './contexts/SlugContext';
 
 export default function App() {
   return (
     <div className="bg-primary-bg">
-      <RoutesProvider>
+      <SlugContextProvider>
         <BrowserRouter>
           <Routes>
             <Route
@@ -30,7 +30,7 @@ export default function App() {
             />
           </Routes>
         </BrowserRouter>
-      </RoutesProvider>
+      </SlugContextProvider>
     </div>
   );
 }
