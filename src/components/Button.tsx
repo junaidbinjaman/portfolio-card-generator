@@ -1,4 +1,6 @@
 import React from 'react';
+import clsx from 'clsx';
+import * as motion from 'motion/react-client';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -6,18 +8,22 @@ interface ButtonProps {
   classes?: string;
 }
 
-/**
- *
- * border-radius: 10px;
- * background: linear-gradient(90deg, var(--Colors-Accent-1, #6AB0FF) 0%, var(--Colors-Accent-2, #D4A5FF) 100%);
- */
 const Button = React.memo(({ children, classes = '', onClick }: ButtonProps) => {
   return (
-    <button
-      className={`bg-linear-[90deg,#6AB0FF,#D4A5FF] transition-all duration-150 active:scale-75 py-[13px] px-[20px] rounded-[10px] font-inter text-paragraph cursor-pointer ${classes}`}
-      onClick={onClick}>
+    <motion.button
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      whileTap={{ scale: 0.75 }}
+      whileHover={{ scale: 1.08 }}
+      transition={{ duration: 0.07, ease: 'linear' }}
+      className={clsx(
+        'bg-linear-[90deg,#6AB0FF,#D4A5FF] py-[13px] px-5 rounded-[10px] font-inter text-paragraph cursor-pointer',
+        classes,
+      )}
+      onClick={onClick}
+    >
       {children}
-    </button>
+    </motion.button>
   );
 });
 

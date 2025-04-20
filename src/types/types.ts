@@ -1,5 +1,5 @@
 export interface DataProps {
-    id: number;
-    title: string;
-    year: number;
-  }
+  id: number;
+  title: string;
+  year: number;
+}

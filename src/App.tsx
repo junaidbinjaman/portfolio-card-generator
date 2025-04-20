@@ -2,10 +2,11 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import './index.css';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import PasswordReset from './pages/PasswordReset';
 
 export default function App() {
   return (
-    <div className='bg-primary-bg'>
+    <div className="bg-primary-bg">
       <BrowserRouter>
         <Routes>
           <Route
@@ -15,6 +16,10 @@ export default function App() {
           <Route
             path="/signup"
             element={<Signup />}
+          />
+          <Route
+            path="password-reset"
+            element={<PasswordReset />}
           />
         </Routes>
       </BrowserRouter>

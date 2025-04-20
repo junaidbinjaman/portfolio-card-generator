@@ -1,5 +1,5 @@
 // data type
-import { DataProps } from "../types/types";
+import { DataProps } from '../types/types';
 
 const cache = new Map<string, Promise<DataProps[]>>();
 
@@ -7,9 +7,9 @@ export default async function fetchData(url: string): Promise<DataProps[]> {
   if (!cache.has(url)) {
     cache.set(url, getData(url));
   }
-  
+
   const data = await cache.get(url);
-if (!data) {
+  if (!data) {
     throw new Error(`No data found for URL: ${url}`); // Ensure no undefined is returned
   }
 

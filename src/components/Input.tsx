@@ -1,7 +1,7 @@
 import { UseFormRegisterReturn } from 'react-hook-form';
 import clsx from 'clsx';
 
-type InputTypes = 'text' | 'textarea' | 'checkbox' | 'upload' | 'submit';
+type InputTypes = 'text' | 'textarea' | 'checkbox' | 'upload' | 'submit' | 'password';
 
 interface InputProps {
   placeholder: string;
@@ -12,37 +12,23 @@ interface InputProps {
 }
 
 function assertIsValidInputType(type: string): asserts type is InputTypes {
-  const validTypes: InputTypes[] = [
-    'text',
-    'textarea',
-    'checkbox',
-    'upload',
-    'submit',
-  ];
+  const validTypes: InputTypes[] = ['text', 'textarea', 'checkbox', 'upload', 'submit', 'password'];
 
   if (!validTypes.includes(type as InputTypes)) {
-    throw new Error(
-      `Invalid input type: ${type}. Expected one of ${validTypes.join(', ')}`,
-    );
+    throw new Error(`Invalid input type: ${type}. Expected one of ${validTypes.join(', ')}`);
   }
 }
 
-const Input = ({
-  type,
-  classes = '',
-  placeholder,
-  register,
-  errors,
-}: InputProps) => {
+const Input = ({ type, classes = '', placeholder, register, errors }: InputProps) => {
   assertIsValidInputType(type);
 
   return (
     <>
-      <div className="relative block p-[1px]">
+      <div className="relative block p-[1px] z-[1]">
         {type === 'textarea' ? (
           <textarea
             className={clsx(
-              'w-full text-paragraph outline-0 py-3 px-3 text-text bg-white rounded-[10px] transition-all duration-300 ease-in-out placeholder:text-gray-400 focus:placeholder:opacity-0',
+              'w-full text-paragraph outline-0 py-3 px-3 text-text bg-[#ECECEC] rounded-[10px] transition-all duration-300 ease-in-out placeholder:text-gray-400 focus:placeholder:opacity-0',
               classes,
             )}
             placeholder={placeholder}
@@ -53,7 +39,7 @@ const Input = ({
           <input
             type={type}
             className={clsx(
-              'w-full text-paragraph outline-0 py-3 px-3 text-text bg-white rounded-[10px] transition-all duration-300 ease-in-out placeholder:text-gray-400 focus:placeholder:opacity-0',
+              'w-full text-paragraph outline-0 py-3 px-3 text-text bg-[#ECECEC] rounded-[10px] transition-all duration-300 ease-in-out placeholder:text-gray-400 focus:placeholder:opacity-0',
               classes,
             )}
             placeholder={placeholder}

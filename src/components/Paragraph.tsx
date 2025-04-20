@@ -13,10 +13,11 @@ const Paragraph = React.memo(({ children, classes = '', role = 'paragraph', sani
   return (
     <p
       className={`text-paragraph text-text font-normal font-inter ${classes}`}
-      role={role}>
+      role={role}
+    >
       {content}
     </p>
   );
-})
+});
 
 export default Paragraph;
