@@ -1,20 +1,21 @@
 import AuthenticationContainer from '../components/AuthenticationContainer';
 import { motion } from 'motion/react';
+import SmallText from '../components/SmallText';
 
 const Login = () => {
   return (
-    <div className="flex justify-center items-center w-screen h-screen">
+    <div className="flex flex-col gap-15 justify-center items-center w-screen h-screen">
       <AuthenticationContainer />
-      <motion.div
-        className="bg-red-500 cursor-pointer p-5 rounded-xl text-white"
-        whileHover={{
-          scale: 1.1,
-          transition: { duration: 0.08, ease: 'easeInOut' },
-        }}
-        whileTap={{ scale: 0.8 }}
-      >
-        <h1>Hello, World</h1>
-      </motion.div>
+      <div>
+        <ul className="flex gap-10">
+          <motion.li whileTap={{ opacity: 0.4, transition: { duration: 0.2 } }}>
+            <SmallText classes="underline cursor-pointer">Privacy Policy</SmallText>
+          </motion.li>
+          <motion.li whileTap={{ opacity: 0.4, transition: { duration: 0.2 } }}>
+            <SmallText classes="underline cursor-pointer">Terms & Conditions</SmallText>
+          </motion.li>
+        </ul>
+      </div>
     </div>
   );
 };
