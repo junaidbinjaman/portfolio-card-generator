@@ -7,7 +7,7 @@ import SmallText from './SmallText';
 import Button from './Button';
 import ButtonOutlined from './ButtonOutlined';
 import SignupForm from './SignupForm';
-import LogoSrc from '../assets/portfolio-card-generator-logo.png';
+import LogoSrc from '/portfolio-card-generator-logo.png';
 import * as motion from 'motion/react-client';
 
 const AuthenticationContainer = () => {
