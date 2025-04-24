@@ -25,7 +25,11 @@ const AuthenticationContainer = () => {
   };
 
   return (
-    <div className="p-[3.12rem] bg-white h-[38.75rem] rounded-[10px] shadow-primary">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      className="p-[3.12rem] bg-white h-[38.75rem] rounded-[10px] shadow-primary"
+    >
       <section className="flex justify-center mb-10">
         <Logo
           src={LogoSrc}
@@ -110,7 +114,7 @@ const AuthenticationContainer = () => {
           <SignupForm />
         </motion.section>
       )}
-    </div>
+    </motion.div>
   );
 };
 

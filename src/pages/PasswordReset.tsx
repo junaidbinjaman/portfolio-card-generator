@@ -7,6 +7,7 @@ const PasswordReset = () => {
   return (
     <div className='flex flex-col justify-center items-center gap-15 w-screen h-screen'>
       <PWResetContainer />
+
       <ul className="flex gap-10">
         <motion.li whileTap={{ opacity: 0.4, transition: { duration: 0.2 } }}>
           <SmallText classes="underline cursor-pointer">Privacy Policy</SmallText>
