@@ -6,7 +6,7 @@ import TermsAndConditions from './pages/TermsAndConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import { useSlug } from './contexts/SlugContext';
 import NotFound404 from './pages/404';
-import Layout from './components/LayOut';
+import Layout from './components/Layout';
 
 export default function App() {
   const passwordResetPageSlug = useSlug('Password Reset');

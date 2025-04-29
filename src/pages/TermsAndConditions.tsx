@@ -8,7 +8,12 @@ const TermsAndConditions = () => {
       <div>
         <title>Terms & conditions</title>
         <Link to="/privacy-policy">Privacy Policy</Link>
-        <PrimaryHeading level={1} classes='text-text'>Terms and Conditions</PrimaryHeading>
+        <PrimaryHeading
+          level={1}
+          classes="text-text"
+        >
+          Terms and Conditions
+        </PrimaryHeading>
         <Paragraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aliquam eaque consectetur animi veniam
           delectus sed! Amet debitis, ad inventore porro, sit eos eum et tempore officia odit placeat exercitationem

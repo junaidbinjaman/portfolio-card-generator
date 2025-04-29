@@ -1,4 +1,5 @@
 import { http, HttpResponse } from 'msw';
+import { data } from './data';
 
 export const handlers = [
   http.get(`${import.meta.env.VITE_API_URL}/slugs`, () => {
@@ -33,4 +34,9 @@ export const handlers = [
       alt: 'The logo alt description',
     });
   }),
+
+
+  http.get(`${import.meta.env.VITE_API_URL}/terms-and-conditions`, () => {
+    return HttpResponse.json(data.termsAndConditions);
+  })
 ];

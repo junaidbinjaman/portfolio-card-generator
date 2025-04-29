@@ -3,12 +3,13 @@ import Avatar from './Avatar';
 import Button from './Button';
 import Logo from './Logo';
 import PrimaryHeading from './PrimaryHeading';
-import LogoSrc from '/portfolio-card-generator-logo.png';
 import { useLocation } from 'react-router';
+import { useLogoSrc } from '../contexts/LogoSrcContext';
 
 const Header = () => {
   const [title, setTitle] = useState('Undefined');
   const location = useLocation();
+  const {logoSrc, alt} = useLogoSrc();
 
   useEffect(() => {
     setTitle(document.title);
@@ -21,8 +22,9 @@ const Header = () => {
     >
       <div className="flex justify-between items-center max-w-5xl mx-auto px-5">
         <Logo
-          src={LogoSrc}
+          src={logoSrc}
           width={167}
+          alt={alt}
         />
         <PrimaryHeading classes="text-3xl font-bold text-transparent bg-linear-to-r from-accent1 to-accent2 bg-clip-text leading-relaxed">
           {title}
