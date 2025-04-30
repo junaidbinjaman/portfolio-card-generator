@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState, useMemo } from 'react';
+import React, { createContext, useContext, useEffect, useState, useMemo, useRef } from 'react';
 
 type SlugTypes = {
   pageId: number;
@@ -16,25 +16,52 @@ const SlugContext = createContext<SlugContextType | undefined>(undefined);
 const SlugContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [slugsMap, setSlugsMap] = useState<Map<string, string>>(new Map());
   const [isLoading, seIsLoading] = useState(true);
+  const cache = useRef<Map<string, string> | null>(null);
 
   useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+
+    if (cache.current) {
+      setSlugsMap(cache.current);
+      return;
+    }
+
+    const timeoutId = setTimeout(() => {
+      controller.abort();
+    }, 5000);
+
     (async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/slugs`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/slugs`, { signal });
         const data: SlugTypes[] = await response.json();
 
         const map = new Map<string, string>();
-        data.map((item) => {
+        data.forEach((item) => {
           map.set(item.title, item.slug);
         });
 
+        cache.current = map;
         setSlugsMap(map);
       } catch (error) {
-        console.log(error);
+        if (error instanceof Error) {
+          if (error.name === 'AbortError') {
+            console.log('Fetch request aborted due to timeout');
+          } else {
+            console.error('Error fetching slugs:', error.message);
+          }
+        } else {
+          console.error('Unknown error:', error);
+        }
       } finally {
         seIsLoading(false);
+        clearTimeout(timeoutId);
       }
     })();
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   const value = useMemo(() => ({ slugsMap, isLoading }), [slugsMap, isLoading]);

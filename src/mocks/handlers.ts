@@ -1,8 +1,14 @@
 import { http, HttpResponse } from 'msw';
 import { data } from './data';
 
+let count = 0;
+
 export const handlers = [
   http.get(`${import.meta.env.VITE_API_URL}/slugs`, () => {
+
+    count++;
+    console.log(count);
+
     return HttpResponse.json([
       {
         pageId: 123,

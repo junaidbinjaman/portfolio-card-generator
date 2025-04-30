@@ -13,7 +13,6 @@ export default function App() {
   const loginPageSlug = useSlug('Login');
   const termsAndConditionsPageSlug = useSlug('Terms & conditions');
   const privacyPolicyPageSlug = useSlug('Privacy Policy');
-  console.log(termsAndConditionsPageSlug);
 
   return (
     <div className="bg-primary-bg">

@@ -33,7 +33,7 @@ const LogoSrcContextProvider = memo(({ children }: LogoSrcContextProviderProps) 
     (async () => {
       try {
         const response = await fetch(`${import.meta.env.VITE_API_URL}/logo`, {
-          signal,
+          signal: signal,
         });
 
         if (!response.ok) {
@@ -57,7 +57,6 @@ const LogoSrcContextProvider = memo(({ children }: LogoSrcContextProviderProps) 
 
     return () => {
       clearTimeout(timeOutId);
-      controller.abort();
     };
   }, []);
 
