@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 interface LogoProps {
   src: string;
   alt?: string;
@@ -18,13 +19,15 @@ const Logo = React.memo(
     }
 
     return (
-      <img
-        src={src}
-        alt={alt || 'Image'}
-        width={width}
-        height={height}
-        onError={handleError}
-      />
+      <Link to="/">
+        <img
+          src={src}
+          alt={alt || 'Image'}
+          width={width}
+          height={height}
+          onError={handleError}
+        />
+      </Link>
     );
   },
 

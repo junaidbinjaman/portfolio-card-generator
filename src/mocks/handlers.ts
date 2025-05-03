@@ -1,4 +1,4 @@
-import { http, HttpResponse } from 'msw';
+import { http, HttpResponse, delay } from 'msw';
 import { data } from './data';
 
 let count = 0;
@@ -36,13 +36,16 @@ export const handlers = [
   http.get(`${import.meta.env.VITE_API_URL}/logo`, () => {
     return HttpResponse.json({
       logoSrc:
-        'https://raw.githubusercontent.com/junaidbinjaman/portfolio-card-generator/refs/heads/main/public/portfolio-card-generator-logo.png',
+        '../../public/portfolio-card-generator-logo.png',
       alt: 'The logo alt description',
     });
   }),
 
 
-  http.get(`${import.meta.env.VITE_API_URL}/terms-and-conditions`, () => {
+  http.get(`${import.meta.env.VITE_API_URL}/pages/terms-and-conditions`, async () => {
+
+    await delay(1000);
+
     return HttpResponse.json(data.termsAndConditions);
   })
 ];

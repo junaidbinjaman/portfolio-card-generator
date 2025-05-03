@@ -10,6 +10,8 @@ const PasswordReset = () => {
 
 
   return (
+    <>
+    <title>Password Reset</title>
     <div className="flex flex-col justify-center items-center gap-15 w-screen h-screen">
       <PWResetContainer />
 
@@ -25,8 +27,8 @@ const PasswordReset = () => {
           </Link>
         </motion.li>
       </ul>
-
     </div>
+    </>
   );
 };
 

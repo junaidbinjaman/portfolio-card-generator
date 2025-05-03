@@ -1,45 +1,126 @@
 const termsAndConditionsContent = `
-  **Terms and Conditions**  
   _Last updated: April 29, 2025_
 
   Welcome to Portfolio Card Generator! By using our website or services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully. If you do not agree with these terms, you must not use our services.
 
+  &nbsp;
+
+  ![The image is image](https://bebconsultancy.co.uk/wp-content/uploads/2019/09/Website-Terms-and-Conditions-Guide-1.jpeg)
+
+  &nbsp;
+
   **1. Acceptance of Terms**  
-  By accessing or using our website, you confirm that you accept these terms and conditions and agree to abide by them.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+
+  &nbsp;
 
   **2. Use of Services**  
-  - You must use our services only for lawful purposes.  
-  - You agree not to misuse or interfere with the functionality of the website.  
-  - Unauthorized use of the website may give rise to a claim for damages or be a criminal offense.
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+  - Integer nec odio. Praesent libero.  
+  - Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.  
+
+  &nbsp;
 
   **3. Intellectual Property**  
-  All content, including text, graphics, logos, and software, is the property of Portfolio Card Generator or its licensors. You may not reproduce, distribute, or create derivative works without prior written permission.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+
+  &nbsp;
 
   **4. User-Generated Content**  
-  - You are responsible for any content you upload or share on the website.  
-  - By submitting content, you grant us a non-exclusive, royalty-free license to use, modify, and display your content.
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+  - Integer nec odio. Praesent libero.  
+  - Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.  
+
+  &nbsp;
 
   **5. Limitation of Liability**  
-  We are not liable for any damages arising from the use or inability to use our services. This includes, but is not limited to, direct, indirect, incidental, or consequential damages.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+
+  &nbsp;
 
   **6. Termination**  
-  We reserve the right to terminate or suspend your access to our services at any time, without notice, for any reason, including a breach of these terms.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+
+  &nbsp;
 
   **7. Changes to Terms**  
-  We may update these terms from time to time. Continued use of the website after changes are made constitutes your acceptance of the updated terms.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+
+  &nbsp;
 
   **8. Governing Law**  
-  These terms are governed by and construed in accordance with the laws of your jurisdiction.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+
+  &nbsp;
 
   **9. Contact Us**  
-  If you have any questions about these terms, please contact us at support@portfoliocardgenerator.com.
+  If you have any questions about these terms, please contact us at **support@portfoliocardgenerator.com**.
 
-  This is a basic and generic "Terms and Conditions" text. You can expand or modify it to suit your specific needs.
+  &nbsp;
+
+  This is a basic and generic "Terms and Conditions" text written with Lorem Ipsum content. You can expand or modify it to suit your specific needs.
+
+&nbsp;
+
+  ### More of terms of use
+
+  There are many variations of passages of Lorem Ipsum available, 
+  but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+
+  &nbsp;
+
+  All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. 
+  It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
+  The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+  &nbsp;
+
+  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+  making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, 
+  to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+  &nbsp;
+
+  # Answer to All who wants to know
+  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+  making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, 
+  to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+  
+  &nbsp;
+  ***
+  &nbsp;
+
+  # Pluto
+
+  **Pluto** (minor-planet designation: *134340 Pluto*)
+  is a
+  [dwarf planet](https://en.wikipedia.org/wiki/Dwarf_planet)
+  in the
+  [Kuiper belt](https://en.wikipedia.org/wiki/Kuiper_belt).
+
+  ## History
+
+  &nbsp;
+
+  In the 1840s,
+  used Newtonian mechanics to predict the position of the
+  then-undiscovered planet
+  after analyzing perturbations in the orbit of
+  
+  &nbsp;
+  **_Thank you** \n
+  _Junaid Bin Jaman_
 `;
 
 export const data = {
   termsAndConditions: {
+    id: 2423423,
+    publishDate: '2024-04-25',
     lastModification: '2025-04-29',
+    author: 'Junaid Bin Jaman',
     content: termsAndConditionsContent,
   },
 };

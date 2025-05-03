@@ -9,6 +9,8 @@ const Login = () => {
   const termsAndConditionsPageSlug = useSlug('Terms & conditions');
 
   return (
+    <>
+    <title>Login</title>
     <div className="flex flex-col gap-15 justify-center items-center w-screen h-screen">
       <AuthenticationContainer />
       <ul className="flex gap-10">
@@ -24,6 +26,7 @@ const Login = () => {
         </motion.li>
       </ul>
     </div>
+    </>
   );
 };
 
