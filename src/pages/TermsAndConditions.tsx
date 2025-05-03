@@ -2,8 +2,8 @@ import { Link } from 'react-router';
 import PrimaryHeading from '../components/PrimaryHeading';
 import { useEffect, useRef, useState } from 'react';
 import Markdown from 'react-markdown';
-import {Mosaic} from 'react-loading-indicators';
 import { motion } from 'motion/react';
+import LoadingScreen from '../components/LoadingScreen';
 
 interface APIResponseDataTypes {
   id: number;
@@ -59,7 +59,7 @@ const TermsAndConditions = () => {
         console.error('Unknown error');
       } finally {
         clearTimeout(timeoutId);
-        setLoading(false);
+        setLoading(true);
       }
     })();
 
@@ -68,7 +68,7 @@ const TermsAndConditions = () => {
     };
   }, []);
 
-  return (
+  const pageContent = (
     <>
       <title>Terms & conditions</title>
       <section className="max-w-4xl mt-8">
@@ -80,17 +80,20 @@ const TermsAndConditions = () => {
           >
             Terms and Conditions
           </PrimaryHeading>
-          {loading ? (
-            <Mosaic color={["#d4a5ff", "#6ab0ff"]} size="large" text="Loading.." textColor="#d4a5ff" />
-          ) : (
-            <motion.div initial={{opacity: 0}} animate={{opacity: 1,}} transition={{duration: 0.5, ease: 'easeInOut'}}>
-              <Markdown>{content?.content ? content?.content : 'No content found'}</Markdown>
-            </motion.div>
-          )}
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+          >
+            <Markdown>{content?.content ? content?.content : 'No content found'}</Markdown>
+          </motion.div>
         </div>
       </section>
     </>
   );
+
+  return loading ? <LoadingScreen /> : pageContent;
 };
 
 export default TermsAndConditions;
