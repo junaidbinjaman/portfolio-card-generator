@@ -19,22 +19,29 @@ const PWResetForm = () => {
   };
 
   return (
-    <div className='flex flex-col gap-5'>
+    <div className="flex flex-col gap-5">
       <SecondaryHeading>Reset your password</SecondaryHeading>
       <Paragraph classes="text-text-secondary">
         Lost your password? Please enter your username or email address. <br />
         You will receive a link to create a new password via email.
       </Paragraph>
 
-      <form onSubmit={handleSubmit(onSubmitHandler)} className='mt-5'>
+      <form
+        onSubmit={handleSubmit(onSubmitHandler)}
+        className="mt-5"
+      >
         <Input
           type="text"
           placeholder="Email.."
-          register={register('email')}
+          register={register('email', {
+            required: 'Email is required',
+          })}
           errors={errors.email?.message}
-          
         />
-        <Submit label='Submit' classes='mt-10' />
+        <Submit
+          label="Submit"
+          classes="mt-10"
+        />
       </form>
     </div>
   );

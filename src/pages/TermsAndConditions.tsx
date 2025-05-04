@@ -1,4 +1,3 @@
-import { Link } from 'react-router';
 import PrimaryHeading from '../components/PrimaryHeading';
 import { useEffect, useRef, useState } from 'react';
 import Markdown from 'react-markdown';
@@ -59,7 +58,7 @@ const TermsAndConditions = () => {
         console.error('Unknown error');
       } finally {
         clearTimeout(timeoutId);
-        setLoading(true);
+        setLoading(false);
       }
     })();
 
@@ -69,31 +68,32 @@ const TermsAndConditions = () => {
   }, []);
 
   const pageContent = (
-    <>
-      <title>Terms & conditions</title>
-      <section className="max-w-4xl mt-8">
-        <div>
-          <Link to="/privacy-policy">Privacy Policy</Link>
-          <PrimaryHeading
-            level={1}
-            classes="text-text"
-          >
-            Terms and Conditions
-          </PrimaryHeading>
+    <section className="max-w-4xl mt-8">
+      <div>
+        <PrimaryHeading
+          level={1}
+          classes="text-text"
+        >
+          Terms and Conditions
+        </PrimaryHeading>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-          >
-            <Markdown>{content?.content ? content?.content : 'No content found'}</Markdown>
-          </motion.div>
-        </div>
-      </section>
-    </>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
+        >
+          <Markdown>{content?.content ? content?.content : 'No content found'}</Markdown>
+        </motion.div>
+      </div>
+    </section>
   );
 
-  return loading ? <LoadingScreen /> : pageContent;
+  return (
+    <>
+      <title>Terms & Conditions</title>
+      {loading ? <LoadingScreen /> : pageContent}
+    </>
+  );
 };
 
 export default TermsAndConditions;

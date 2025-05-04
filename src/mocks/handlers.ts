@@ -47,5 +47,10 @@ export const handlers = [
     await delay(1000);
 
     return HttpResponse.json(data.termsAndConditions);
-  })
+  }),
+
+  http.get(`${import.meta.env.VITE_API_URL}/pages/privacy-policy`, async () => {
+    await delay(1000);
+    return HttpResponse.json(data.privacyPolicy);
+  }),
 ];
