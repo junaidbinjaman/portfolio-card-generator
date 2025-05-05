@@ -11,7 +11,7 @@ type SlugContextType = {
   isLoading: boolean;
 };
 
-const SlugContext = createContext<SlugContextType | undefined>(undefined);
+const SlugContext = createContext<SlugContextType | null>(null);
 
 const SlugContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [slugsMap, setSlugsMap] = useState<Map<string, string>>(new Map());
@@ -71,6 +71,12 @@ const SlugContextProvider = ({ children }: { children: React.ReactNode }) => {
 
 export default SlugContextProvider;
 
+/**
+ * The useSlug hook is used to get the slug for a given page title.
+ * 
+ * @param pageTitle - The case sensitive title of the page to get the slug for.
+ * @returns 
+ */
 export const useSlug = (pageTitle: string) => {
   const context = useContext(SlugContext);
 
